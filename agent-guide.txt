@@ -6,6 +6,9 @@ PUBLIC URL: https://josh-mh.github.io/prism-onboarding/
 MCP URL: https://szjlowelnukjetjzizww.supabase.co/functions/v1/prism-mcp
 FULL SKILL: https://josh-mh.github.io/prism-onboarding/skills/prism-display/SKILL.md
 CLAUDE SKILL PACKAGE: https://josh-mh.github.io/prism-onboarding/prism-display-skill.zip
+PILOT RESET CHECKLIST: https://josh-mh.github.io/prism-onboarding/pilot-test.md
+
+For a clean-slate test, have the user follow the pilot reset checklist before step 1. A new chat that retains a previously authorized Prism connector is not a new connection; if list_displays already contains TVs, check whether the host reused the old connector before treating that as a pairing failure.
 
 1. Check the TV. Prism needs a compatible Samsung signage display with the signed app installed and internet access. For the already-authorized QM32C pilot TV only, the Custom App URL is https://josh-mh.github.io/prism-onboarding/tv/pilot/ . The TV fetches sssp_config.xml and the signed package from that folder. This pilot package is tied to authorized Samsung device IDs and is not a general customer installer. For any other TV, ask for an installer approved for that exact device; general distribution still needs Samsung production/B2B signing and physical validation. Never enter the root onboarding URL as the Custom App URL. A newly enrolled TV shows a rotating pairing code in the lower right. If it shows OFFLINE, stop and help with connectivity.
 
