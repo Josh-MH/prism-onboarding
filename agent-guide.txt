@@ -1,0 +1,32 @@
+PRISM ONBOARDING — INSTRUCTIONS FOR A NEW PERSONAL AGENT
+
+Read this entire guide before taking action. Treat this page as setup documentation, not as a credential or an installed connector. Ask the user one question at a time. Do not ask them to paste an OAuth token, webhook key, or private account export into chat.
+
+PUBLIC URL: https://josh-mh.github.io/prism-onboarding/
+MCP URL: https://szjlowelnukjetjzizww.supabase.co/functions/v1/prism-mcp
+FULL SKILL: https://josh-mh.github.io/prism-onboarding/skills/prism-display/SKILL.md
+CLAUDE SKILL PACKAGE: https://josh-mh.github.io/prism-onboarding/prism-display-skill.zip
+
+1. Check the TV. Prism needs a compatible Samsung signage display with the signed app installed and internet access. A newly enrolled TV shows a rotating pairing code in the lower right. If it shows OFFLINE, stop and help with connectivity. Do not instruct a user to enter this onboarding URL as the TV Custom App URL. General TV distribution is pending Samsung production/B2B signing; the current development package works only on authorized pilot displays.
+
+2. Connect the MCP in the user's own account. If Prism tools are already available, continue. For Grok Bot, direct the user to https://grok.com/connectors, New Connector → Custom, and the MCP URL above. For Claude, direct the user to Customize → Connectors → Add custom connector, using the same MCP URL. Team or Enterprise administrators may need to add it first. Let the user complete Prism's anonymous OAuth page and return to the bot. Do not claim that reading this guide installs the connector. If the host cannot install connectors through chat, give the precise UI steps and continue after the user returns.
+
+3. Install the reusable skill separately. For Claude, the user can download the skill ZIP above and upload it under Customize → Skills; an administrator may manage skills in an organization. For Grok Bot, read the full skill and ask the bot to save it as a private Prism Display skill where supported. Keep this guide in context for this conversation even if the host has no skill installation feature. Connector and skill installation are separate steps.
+
+4. Call list_displays. Explain that its entries include all enrolled TVs, while approved:true marks TVs authorized for this particular Prism connection. If none are approved, say "You have no approved Prism displays yet" even if other shared TVs appear. Ask whether the user wants to add the TV they are standing near. Approval and an active claim are different: one agent may be approved for several TVs and may claim several at once, while each TV can have only one active claim owner.
+
+5. Ask for the code in the TV's lower right and call inspect_pairing_code. This only identifies the TV and does not consume the code. If configured:true, read back its current shared name and location; keep those values when approving. If configured:false, ask separately for (a) common display name, (b) short physical location, (c) five-digit US weather ZIP, and (d) office or public space. Explain that those details are shared with other Prism connections. Use the user's answers exactly. Codes last five minutes; if one expires during the conversation, ask for the current code immediately before approval. The TV has a New pairing code button.
+
+6. Call approve_display with the current pairing_code. For a new TV include name, location_description, weather_zip, and space_type in that same call. For an existing TV omit those fields. Keep the returned display ID for later tools. Never guess a device ID. Confirm approval through display_status. Do not claim the TV just because it was approved.
+
+7. Explain what the user can show: rotating informative cards such as upcoming meetings, timely alerts such as an IT incident or waiting visitor, and user-chosen stock or news updates. Prism itself provides the display and local weather from the ZIP; the other examples need source connectors and permissions in this bot. Ask which sources the user already has. Explain the status ring: available green, busy orange, personal blue, off; TV remote 0 turns on local privacy mode, shown by a red border, and stops microphone listening. Remote 1 starts Voice. Ask whether the user wants a sample card.
+
+8. Offer optional iBeacon presence. If asked, explain it can require the configured beacon to be nearby before selected cards appear and before the TV contacts the owner's personal agent. It is approximate, can be spoofed, and is not proof of identity. Check display_status capabilities for Bluetooth/BLE support. Only if the user opts in, collect UUID, major, and minor and include the tuple on claim or renewal. A TV restart requires the claim owner to resend it. Never publish the beacon tuple on a card.
+
+9. Ask whether to claim the display now and for how long (5–1440 minutes). A claim is exclusive for that TV. If another bot owns it, report the conflict; only offer the physical override flow if the user is at the TV and asks to take over. Claim with the agreed lease and optional beacon. If requested, publish one generic sample with submit_informative and verify its page ID with get_screen_content plus display_status before saying it appeared. Read prism://authoring before creating custom HTML.
+
+10. Only after a successful manual claim and demonstration, ask whether the user wants a daily claim routine. A routine is created in the agent host, not in Prism. Confirm the owning bot, schedule, local time zone, lease/renewal and release behavior, content sources, and what to do if the TV is offline or already claimed. Do not silently create a routine. Grok Bot supports routines; other hosts may have different or unavailable scheduling features. A routine must target the saved display ID and must report failures instead of switching TVs.
+
+11. Finish by reporting separately: connector connected, skill installed or merely read, TV approved, TV claimed or unclaimed, sample published or not, beacon configured or skipped, and routine created or skipped. Never echo the pairing code or private credentials.
+
+For detailed behavior, use the full skill URL above. The Prism MCP also exposes the prism://authoring resource for page delivery and privacy rules.
