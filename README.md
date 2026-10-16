@@ -2,7 +2,7 @@
 
 Public setup site for Prism displays: https://josh-mh.github.io/prism-onboarding/
 
-The [agent guide](agent-guide.txt) walks a new Grok Bot or Claude user through MCP OAuth, skill setup, physical TV pairing, optional presence, a sample card, and a daily claim routine. The [full skill](skills/prism-display/SKILL.md) is published here as readable source, and `prism-display-skill.zip` is packaged for Claude's skill upload flow.
+The [agent guide](agent-guide.txt) walks a new Grok Bot or Claude user through MCP OAuth, skill setup, physical TV pairing, optional presence and Voice button beacons, a sample card, and a daily claim routine. The [full skill](skills/prism-display/SKILL.md) is published here as readable source, and `prism-display-skill.zip` is packaged for Claude's skill upload flow.
 
 The [clean-slate pilot checklist](pilot-test.md) gives expected observations for the authorized QM32C test.
 
