@@ -4,6 +4,8 @@ This repository is the public setup site and package host for [Prism](https://gi
 
 The [source repository](https://github.com/Josh-MH/Prism) contains the TV app, Supabase migrations and Edge Functions, tests, build tooling, and the source Prism Display skill. This repository contains the public onboarding copy, the hosted signed pilot package, and the browser side of one-use screen sharing. The public site is **https://josh-mh.github.io/prism-onboarding/**.
 
+The onboarding page uses a five-scene, still-based scroll journey built with the [scroll-world](https://github.com/oso95/scroll-world) engine. Its architectural illustrations are local SVG assets, with separate portrait compositions for phones. No paid video generation or external asset service is required; the scenes crossfade and move subtly on scroll rather than presenting a generated continuous camera film. The source for the artwork is `world/generate-scenes.mjs`; rerun `node world/generate-scenes.mjs` after changing it. The adapted engine retains its MIT notice in `world/SCROLL-WORLD-LICENSE`.
+
 ## Current hosted release
 
 | Item | URL | Purpose |
@@ -36,7 +38,7 @@ The TV can answer public questions through Grok Voice and can contact the curren
 
 | Path | Role |
 | --- | --- |
-| `index.html` | Public onboarding page and copyable setup prompt |
+| `index.html`, `world/` | Public onboarding page, scroll journey, artwork, and copyable setup prompt |
 | `agent-guide.txt` | Detailed setup instructions for an agent |
 | `skills/prism-display/SKILL.md` | Readable published skill, synchronized from the source repository |
 | `prism-display-skill.zip` | Uploadable skill archive |

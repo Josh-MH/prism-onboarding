@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" role="img" aria-label="Prism architectural scene">
+  <defs>
+    <radialGradient id="back"><stop stop-color="#16372f"/><stop offset=".48" stop-color="#0a1b1d"/><stop offset="1" stop-color="#060b10"/></radialGradient>
+    <radialGradient id="aura"><stop stop-color="#81f3cc" stop-opacity=".8"/><stop offset="1" stop-color="#81f3cc" stop-opacity="0"/></radialGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#203a3b"/><stop offset=".55" stop-color="#101f25"/><stop offset="1" stop-color="#0a151b"/></linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2a4140"/><stop offset="1" stop-color="#071116"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#132c31"/><stop offset="1" stop-color="#081b23"/></linearGradient>
+    <radialGradient id="moon"><stop stop-color="#f1f1c8"/><stop offset=".55" stop-color="#acd2be"/><stop offset="1" stop-color="#65adab" stop-opacity=".35"/></radialGradient>
+    <radialGradient id="orb"><stop stop-color="#e8ffe8"/><stop offset=".36" stop-color="#9be5c9"/><stop offset="1" stop-color="#2d807f"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <rect width="900" height="1600" fill="#060b10"/>
+  <rect width="900" height="1600" fill="url(#back)" opacity=".86"/>
+  <circle cx="620" cy="380" r="320" fill="#49aa91" opacity=".12" filter="url(#blur)"/>
+  <path d="M0 1200 H900" stroke="#60aa98" stroke-opacity=".12"/>
+  <g transform="translate(450 500) scale(1)" filter="url(#shadow)">
+    <path d="M-465,-285 L360,-285 L465,-180 L465,198 L-465,198 Z" fill="url(#wall)" stroke="#759a8c" stroke-opacity=".42" stroke-width="2"/>
+    <path d="M-465,198 L465,198 L620,362 L-620,362 Z" fill="url(#floor)" stroke="#759a8c" stroke-opacity=".28" stroke-width="2"/>
+    <path d="M-465,-285 L-465,198 L-620,362 M360,-285 L465,-180 M465,198 L620,362" fill="none" stroke="#9ac5ae" stroke-opacity=".22" stroke-width="2"/>
+    <path d="M-415,-250 V156 M-365,-250 V156 M377,-145 V168 M420,-116 V183" stroke="#92c4ab" stroke-opacity=".1" stroke-width="2"/>
+    <path d="M-620,362 H620 M-456,205 H455" stroke="#a5d5bf" stroke-opacity=".14" stroke-width="2"/>
+    <path d="M-210,198 L-272,362 M210,198 L272,362" stroke="#c1dbca" stroke-opacity=".08" stroke-width="2"/>
+    <rect x="-303" y="-181" width="606" height="326" rx="16" fill="#020608" stroke="#b3d5c4" stroke-opacity=".62" stroke-width="3"/>
+    <rect x="-291" y="-169" width="582" height="302" rx="8" fill="url(#screen)"/>
+    <path d="M-274,-150 H270" stroke="#e5f7e4" stroke-opacity=".12"/>
+    <g>
+    <rect x="-180" y="-116" width="360" height="193" rx="14" fill="#11272c" stroke="#a7e2ce" stroke-opacity=".5"/>
+    <path d="M-144,-76 H-26 M-144,-57 H95" stroke="#afcac0" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+    <g fill="#d7f5e8"><rect x="-144" y="-3" width="43" height="48" rx="7"/><rect x="-90" y="-3" width="43" height="48" rx="7"/><rect x="-36" y="-3" width="43" height="48" rx="7"/><rect x="32" y="-3" width="43" height="48" rx="7"/><rect x="86" y="-3" width="43" height="48" rx="7"/></g>
+    <circle cx="145" cy="-91" r="6" fill="#a0e4cd"/>
+  </g>
+    <path d="M-20,145 H20 L34,187 H-34 Z" fill="#142026" stroke="#768f86" stroke-opacity=".28"/>
+    <path d="M-123,187 H123 L139,199 H-139 Z" fill="#111d23"/>
+    <path d="M-440,199 H440" stroke="#b6d9c3" stroke-opacity=".17" stroke-width="3"/>
+    <path d="M-402,245 H402" stroke="#8ab5a1" stroke-opacity=".1" stroke-width="2"/>
+  </g>
+  <circle cx="450" cy="880" r="360" fill="#4ab193" opacity=".08" filter="url(#blur)"/>
+  </svg>
