@@ -11,7 +11,7 @@ Use this checklist on the Samsung QM32C whose device ID is already included in t
 
 ## Run the onboarding test
 
-1. In the TV's Custom App or URL Launcher settings, enter `https://josh-mh.github.io/prism-onboarding/tv/pilot/` exactly. Expect Prism 2.0.81 to install and open. Record the exact error if installation fails.
+1. In the TV's Custom App or URL Launcher settings, enter `https://josh-mh.github.io/prism-onboarding/tv/pilot/` exactly. Expect Prism 2.0.82 to install and open. Record the exact error if installation fails.
 2. On the unconfigured TV, expect the local date and time and a five-minute pairing code in the lower right. There should be no shared display name, owner card, or listening indicator. If it says `OFFLINE`, check network access and record the message in Display Settings.
 3. In a brand-new Grok Bot or Claude conversation, paste the prompt on the [onboarding page](./). Complete the Prism MCP connector setup and its OAuth consent in the host's UI. The bot should call `list_displays` and report zero approved TVs.
 4. Give the bot the current TV code. It should call `inspect_pairing_code` without consuming it, then ask separately for a common name, physical location, five-digit US weather ZIP, and office or public space. If the code expires while answering, use the current code before approval.
