@@ -28,6 +28,7 @@ button{font:inherit}
 #world .sw-scrollbar{height:2px;background:rgba(166,211,190,.1)}#world .sw-scrollbar span{background:#c5ecd5}
 body.past-world #world .sw-sky,body.past-world #world .sw-stage,body.past-world #world .sw-copylayer,body.past-world #world .sw-route,body.past-world #world .sw-hint{opacity:0;pointer-events:none}
 body.past-world #world .sw-nav{opacity:0;pointer-events:none}
+body.past-world #world .sw-nav,body.past-world #world .sw-route{visibility:hidden}
 #world .sw-sky,#world .sw-stage,#world .sw-copylayer,#world .sw-route{transition:opacity .35s ease}
 .details{position:relative;z-index:30;background:linear-gradient(180deg,#081116,#080d12 35%,#050a0d);box-shadow:0 -50px 90px #050b0e}
 .details section[id]{scroll-margin-top:90px}

@@ -17,7 +17,12 @@ mountScrollWorld(document.getElementById('world'), {
 });
 
 const details=document.getElementById('start');
-function updateWorldVisibility(){document.body.classList.toggle('past-world',window.scrollY>details.offsetTop-window.innerHeight*.55);}
+const journeyControls=[...document.querySelectorAll('.sw-nav,.sw-route,.sw-copylayer')];
+function updateWorldVisibility(){
+  const past=window.scrollY>details.offsetTop-window.innerHeight*.55;
+  document.body.classList.toggle('past-world',past);
+  for(const control of journeyControls){control.inert=past;control.setAttribute('aria-hidden',String(past));}
+}
 window.addEventListener('scroll',updateWorldVisibility,{passive:true});
 window.addEventListener('resize',updateWorldVisibility);
 updateWorldVisibility();
