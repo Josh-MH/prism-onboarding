@@ -16,7 +16,7 @@ The [source repository](https://github.com/Josh-MH/Prism) contains the TV app, S
 | Samsung Custom App URL | https://josh-mh.github.io/prism-onboarding/tv/pilot/ | Folder containing the Samsung manifest and signed WGT |
 | Pilot checklist | https://josh-mh.github.io/prism-onboarding/pilot-test.md | Physical install and first-user test steps |
 
-The hosted TV package is **Prism 2.0.83** with application ID `LmOpunhFNs.MathisAIRoomDiagnostic`. `tv/pilot/sssp_config.xml` names the version and exact byte size of `tv/pilot/MathisAIRoomDiagnostic.wgt`; Samsung's Custom App / URL Launcher reads that folder URL. Enter the **folder URL**, including its trailing slash, in the TV settings. The root onboarding page is for people and agents and is not a TV installation URL.
+The hosted TV package is **Prism 2.0.84** with application ID `LmOpunhFNs.MathisAIRoomDiagnostic`. `tv/pilot/sssp_config.xml` names the version and exact byte size of `tv/pilot/MathisAIRoomDiagnostic.wgt`; Samsung's Custom App / URL Launcher reads that folder URL. Enter the **folder URL**, including its trailing slash, in the TV settings. The root onboarding page is for people and agents and is not a TV installation URL.
 
 The current pilot distributor certificate covers **Josh Hamil's Office and Joe Burrage's Office TVs**. This package is tied to those approved Samsung device IDs. It cannot be assumed to install on another TV, even one of the same model. General deployment requires an appropriate Samsung production/B2B signing path and physical validation. A hosted manifest or successful upload alone does not prove that either TV installed the new version; check the TV's Display Status after updating it.
 
