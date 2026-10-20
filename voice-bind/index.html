@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://szjlowelnukjetjzizww.supabase.co; base-uri 'none'; form-action 'none'">
+  <title>Bind Prism Voice</title>
+  <link rel="stylesheet" href="bind.css">
+  <script src="bind.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">PRISM</div>
+    <h1>Connect your TV to your agent</h1>
+    <p id="display">Checking your private link…</p>
+    <p>Enter the Voice webhook URL and bearer key here. They go directly to Prism and the TV. They are not shown to your bot or saved in Prism's database.</p>
+    <form id="form" autocomplete="off">
+      <label for="webhookUrl">Webhook URL</label>
+      <input id="webhookUrl" type="url" inputmode="url" maxlength="2048" placeholder="https://…" required autocomplete="off" spellcheck="false">
+      <label for="webhookKey">Webhook bearer key</label>
+      <input id="webhookKey" type="password" minlength="16" maxlength="2000" required autocomplete="off" spellcheck="false">
+      <p id="presenceNote" class="fine" hidden>This TV has an active presence beacon. Re-enter its identity to keep it working.</p>
+      <fieldset id="presence" hidden><legend>Presence beacon</legend><label for="presenceUuid">UUID</label><input id="presenceUuid" autocomplete="off" spellcheck="false"><label for="presenceMajor">Major</label><input id="presenceMajor" type="number" min="0" max="65535"><label for="presenceMinor">Minor</label><input id="presenceMinor" type="number" min="0" max="65535"></fieldset>
+      <p id="voiceButtonNote" class="fine" hidden>This TV has an active Voice button beacon. Re-enter its identity to keep it working.</p>
+      <fieldset id="voiceButton" hidden><legend>Voice button beacon</legend><label for="voiceButtonUuid">UUID</label><input id="voiceButtonUuid" autocomplete="off" spellcheck="false"><label for="voiceButtonMajor">Major</label><input id="voiceButtonMajor" type="number" min="0" max="65535"><label for="voiceButtonMinor">Minor</label><input id="voiceButtonMinor" type="number" min="0" max="65535"></fieldset>
+      <button id="submit" type="submit" disabled>Send binding to TV</button>
+    </form>
+    <div id="status" role="status" aria-live="polite"></div>
+    <p class="fine">This link works once and expires after five minutes. If the TV is offline or the claim changes, ask your agent for a new link.</p>
+  </main>
+</body>
+</html>
