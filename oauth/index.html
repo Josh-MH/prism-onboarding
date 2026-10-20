@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://szjlowelnukjetjzizww.supabase.co; base-uri 'none'; form-action 'none'">
+  <title>Connect Prism</title>
+  <link rel="stylesheet" href="connect.css">
+  <script src="connect.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">PRISM</div>
+    <h1>Connect Prism to your agent</h1>
+    <p>This creates a private, anonymous Prism identity for this connector. No email or password is needed.</p>
+    <p>Your agent can discover displays and, with the pairing code shown on a TV, approve itself to use one. It must ask before claiming a display or changing shared details.</p>
+    <p id="requester" class="fine">Checking which connector is requesting access…</p>
+    <p class="fine">Prism does not keep chat transcripts or a history of who edited display details. It keeps this connection and its display approvals, plus a last-used time. If the connection is lost, create another and approve displays again. Unused connections are removed after 90 days.</p>
+    <button id="connect" class="button" type="button" disabled>Create connection and continue</button>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <p class="fine">You can close this page without connecting.</p>
+  </main>
+</body>
+</html>
