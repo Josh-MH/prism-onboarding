@@ -18,7 +18,7 @@ The onboarding page uses a five-scene, still-based scroll journey built with the
 | Samsung Custom App URL | https://josh-mh.github.io/prism-onboarding/tv/pilot/ | Folder containing the Samsung manifest and signed WGT |
 | Pilot checklist | https://josh-mh.github.io/prism-onboarding/pilot-test.md | Physical install and first-user test steps |
 
-The hosted TV package is **Prism 2.0.85** with application ID `LmOpunhFNs.MathisAIRoomDiagnostic`. `tv/pilot/sssp_config.xml` names the version and exact byte size of `tv/pilot/MathisAIRoomDiagnostic.wgt`; Samsung's Custom App / URL Launcher reads that folder URL. Enter the **folder URL**, including its trailing slash, in the TV settings. The root onboarding page is for people and agents and is not a TV installation URL.
+The hosted TV package is **Prism 2.0.86** with application ID `LmOpunhFNs.MathisAIRoomDiagnostic`. `tv/pilot/sssp_config.xml` names the version and exact byte size of `tv/pilot/MathisAIRoomDiagnostic.wgt`; Samsung's Custom App / URL Launcher reads that folder URL. Enter the **folder URL**, including its trailing slash, in the TV settings. The root onboarding page is for people and agents and is not a TV installation URL.
 
 Version 2.0.85 plays a silent Prism bot animation on app launch and when a new claim starts. It fades above the background and cards, while the clock, weather, display location, and pairing code remain visible. The TV's Motion: Reduced setting suppresses the animation.
 
